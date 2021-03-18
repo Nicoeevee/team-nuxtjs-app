@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>疫情防控数据</h1>
     <el-table
       :data="tableData.list"
@@ -103,5 +103,13 @@ export default {
 </script>
 
 <style scoped>
-
+.container {
+  padding-top: 8px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
 </style>
