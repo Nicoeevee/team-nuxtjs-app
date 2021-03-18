@@ -13,12 +13,18 @@ export const Test2= (data) => {
     method: 'post',
     data
   })
-};
+}
 export function epidemic_pageQuery(query) {
   return request({
     url: 'epidemic/pageQuery',
     method: 'get',
     params: query
   })
-};
-
+}
+// export function epidemic_Update(data) {
+//   return request({
+//     url: 'epidemic/saveOrUpdate',
+//     method: 'post',
+//     params: data
+//   })
+// }
