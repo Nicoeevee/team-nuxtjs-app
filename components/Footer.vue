@@ -13,35 +13,22 @@
 export default {
   name: "the_footer",
   data() {
-    return {
-      activeIndex: '1',
-      activeIndex2: '1',
-      logo:
-        require("../assets/hhxy.jpg"),
-      qrcode:
-        require("../assets/qrcode_localhost.png"),
-
-    };
+    return {};
   },
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    }
-  }
+  methods: {}
 }
 </script>
 
 <style scoped>
 .footer {
-  height: 65px;
-  text-align: center;
+  height: 64px;
   background-color: #000;
   color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
   font-size: 14px;
   overflow: hidden;
-}
-
-.footer > div:first-child {
-  margin-top: 10px;
 }
 </style>

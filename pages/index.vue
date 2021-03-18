@@ -1,12 +1,17 @@
 <template>
   <div class="container">
-    <template>
-      <el-carousel indicator-position="outside">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3>{{ item }}</h3>
+    <h1 class="index_slogan"><span>
+      着手开发。
+      立即预览。
+      轻松部署。
+    </span></h1>
+    <div class="carousel">
+      <el-carousel :interval="5000" indicator-position="outside" arrow="hover" height="560px">
+        <el-carousel-item v-for="img in images" :key="img">
+          <img :src="img" alt="轮播图">/>
         </el-carousel-item>
       </el-carousel>
-    </template>
+    </div>
     <Nuxt></Nuxt>
   </div>
 </template>
@@ -16,9 +21,10 @@ export default {
   layout: 'default',
   data() {
     return {
-      img: [
-        require("../assets/img1.png"),
-        require("../assets/img4.png")
+      images: [
+        require("../assets/unsplash00.jpg"),
+        require("../assets/unsplash01.jpg"),
+        require("../assets/unsplash02.jpg")
       ],
     };
   },
@@ -26,29 +32,38 @@ export default {
 </script>
 
 <style>
+.index_slogan {
+  font-size: 9rem;
+}
+
+.index_slogan > span {
+  word-break: normal;
+  width: auto;
+  display: block;
+  line-height: 1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+}
 
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
+  margin: 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-
 }
-.el-carousel__item h3 {
-  color: #475669;
-  font-size: 18px;
-  opacity: 0.75;
-  line-height: 300px;
+
+.carousel {
+  width: 100%;
+  height: 100vh;
   margin: 0;
 }
 
-.el-carousel__item:nth-child(2n) {
-  background-color: #99a9bf;
-}
-
-.el-carousel__item:nth-child(2n+1) {
-  background-color: #d3dce6;
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>

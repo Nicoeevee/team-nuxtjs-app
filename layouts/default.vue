@@ -7,7 +7,6 @@
     <div class="footer_main">
       <Footer></Footer>
     </div>
-
   </div>
 </template>
 <style>
@@ -22,8 +21,10 @@
   bottom: 0;
 }
 
-
 html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
   font-family: 'Source Sans Pro',
   -apple-system,
   BlinkMacSystemFont,

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>疫情防控数据</h1>
     <el-table
       :data="tableData"
