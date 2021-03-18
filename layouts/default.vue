@@ -9,15 +9,16 @@
   </div>
 </template>
 <style>
-  .home_main{
-    min-height: 100vh;
-    position: relative;
-  }
-  .footer_main{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
+.home_main {
+  min-height: 100vh;
+  position: relative;
+}
+
+.footer_main {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
 
 
 html {
