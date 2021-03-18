@@ -34,6 +34,13 @@
         </el-popover>
       </el-col>
     </el-row>
+    <div class="carousel">
+      <el-carousel :interval="5000" arrow="always">
+        <el-carousel-item v-for="item in img" :key="item">
+          <img :src="item"/>
+        </el-carousel-item>
+      </el-carousel>
+    </div>
   </div>
 </template>
 
@@ -48,7 +55,10 @@ export default {
         require("../assets/hhxy.jpg"),
       qrcode:
         require("../assets/qrcode_localhost.png"),
-
+      img: [
+        require("../assets/img1.png"),
+        require("../assets/img4.png")
+      ],
     };
   },
   methods: {
@@ -61,15 +71,20 @@ export default {
 
 <style scoped>
 
-img {
+.carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.el-popover img {
   width: 75px;
   height: 75px;
   display: block;
 }
 
 span img {
-  width: 200px;
-  height: 200px;
+  width: 75px;
+  height: 75px;
   float: right;
   display: none;
   /* margin-top: 75px; */
