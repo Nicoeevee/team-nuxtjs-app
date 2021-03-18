@@ -3,8 +3,9 @@
     <div>
       <Logo />
       <h1 class="title">
-        nuxt-app
+       hello world
       </h1>
+      
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -22,16 +23,21 @@
         >
           GitHub
         </a>
+        
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  layout:'home'
+
+}
 </script>
 
 <style>
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
