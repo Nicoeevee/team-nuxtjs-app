@@ -30,24 +30,34 @@
 </template>
 
 <script>
-  import {Test1} from '@/api/index.js'
+  import {Test2,Test1} from "@/api";
   export default {
     layout:'home',
     data(){
       return{
-
+        test:{
+          id:1370,
+          categoryId:5,
+          title:222,
+          content:1222
+        }
       }
     },
     created(){
       this.Test()
+      this.Test2()
     },
     methods:{
-
       async Test() {
         const code = await Test1();
         console.log(code.data)
       },
 
+      async Test2(){
+        const code = await Test2(this.test);
+        console.log('-----------')
+        console.log(code)
+      }
     }
 
   }
