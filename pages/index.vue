@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 class="index_slogan"><span>
+    <h1><span>
       着手开发。
       立即预览。
       轻松部署。
@@ -32,11 +32,11 @@ export default {
 </script>
 
 <style>
-.index_slogan {
+h1 {
   font-size: 9rem;
 }
 
-.index_slogan > span {
+h1 > span {
   word-break: normal;
   width: auto;
   display: block;
