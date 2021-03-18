@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "footer",
+  name: "the_footer",
   data() {
     return {
       activeIndex: '1',

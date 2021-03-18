@@ -1,11 +1,25 @@
 <template>
-  <div>
+  <div class="home_main">
     <NavBar/>
     <Nuxt/>
-    <Footer></Footer>
+    <div class="footer_main">
+      <Footer></Footer>
+    </div>
+
   </div>
 </template>
 <style>
+  .home_main{
+    min-height: 100vh;
+    position: relative;
+  }
+  .footer_main{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+
 html {
   font-family: 'Source Sans Pro',
   -apple-system,
