@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: "nav",
+  name: "the_nav",
   data() {
     return {
       activeIndex: '1',
