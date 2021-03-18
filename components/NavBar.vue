@@ -13,7 +13,7 @@
           <el-menu-item index="1" @click="$router.push({name: 'index'})">首页</el-menu-item>
           <el-menu-item index="2" @click="$router.push({name: 'news'})">新闻</el-menu-item>
           <el-menu-item index="3" @click="$router.push({name: 'examples'})">案例</el-menu-item>
-          <el-menu-item index="4" @click="$router.push({name: 'solution'})">解决方案</el-menu-item>
+          <el-menu-item index="4" @click="$router.push({name: 'solution'})">疫情防控</el-menu-item>
           <el-menu-item index="5" @click="$router.push({name: 'playground'})">playground</el-menu-item>
         </el-menu>
       </el-col>
@@ -34,13 +34,7 @@
         </el-popover>
       </el-col>
     </el-row>
-    <div class="carousel">
-      <el-carousel :interval="5000" arrow="always">
-        <el-carousel-item v-for="item in img" :key="item">
-          <img :src="item"/>
-        </el-carousel-item>
-      </el-carousel>
-    </div>
+
   </div>
 </template>
 
@@ -76,11 +70,7 @@ export default {
   height: 100%;
 }
 
-.el-popover img {
-  width: 75px;
-  height: 75px;
-  display: block;
-}
+
 
 span img {
   width: 75px;

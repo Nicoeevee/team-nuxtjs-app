@@ -1,6 +1,6 @@
 import request from './request'
 
-export function Test1(query) {
+export function article_findAll(query) {
   return request({
     url: 'article/findAll',
     method: 'get',
@@ -14,3 +14,11 @@ export const Test2= (data) => {
     data
   })
 };
+export function epidemic_pageQuery(query) {
+  return request({
+    url: 'epidemic/pageQuery',
+    method: 'get',
+    params: query
+  })
+};
+
