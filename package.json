@@ -14,5 +14,14 @@
     "element-ui": "^2.15.0",
     "nuxt": "^2.14.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxt/types": "^2.15.3"
+  },
+  "builds": [
+    {
+      "src": "nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {}
+    }
+  ]
 }
