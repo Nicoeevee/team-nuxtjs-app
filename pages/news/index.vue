@@ -2,12 +2,12 @@
   <div class="content">
     <div class="center">
       <div class="center_left">
-        <div class="article" v-for="i in 6" :key="i">
+        <div class="article" v-for="i in NewsData" :key="i">
           <div class="article_title">
-            标题
+            {{i.title}}
           </div>
           <div class="article_content">
-            内容
+            {{i.content}}
             <div class="article_footer">
               <span>200 浏览</span>
               <span>
@@ -25,13 +25,13 @@
         <div class="right_title">
           推荐
         </div>
-        <div class="right_item" v-for="o in 10" :key="o">
+        <div class="right_item" v-for="o in NewsData" :key="o">
           <div class="item_top">
-            <span> <i class="fa fa-calendar-times-o"></i> 2021-3-18 </span>
-            <span><i class="fa fa-eye"></i> 20</span>
+            <span> <i class="fa fa-calendar-times-o"></i> {{formatDate(o.publishTime)}} </span>
+<!--            <span><i class="fa fa-eye"></i> 20</span>-->
           </div>
           <div class="item_bootom">
-            内容
+            {{o.content.slice(0,10)}}..........
           </div>
         </div>
       </div>
@@ -39,8 +39,32 @@
   </div>
 </template>
 <script>
+  import {article_findAll} from '@/api'
   export default {
-    layout: "default"
+    layout: "default",
+    data() {
+      return {
+        NewsData: [],
+      };
+    },
+    created() {
+      this.findAll()
+    },
+    methods:{
+      async findAll(){
+        const data = await article_findAll();
+        this.NewsData=data.data;
+      },
+      //时间戳转换方法    time:需要被转换的时间戳数字
+      formatDate(time) {
+        var date=new Date(parseInt(time));
+        var year=date.getFullYear();
+        var mon = date.getMonth()+1;
+        var day = date.getDate();
+        return year+'/'+mon+'/'+day;
+      }
+      ,
+    }
   };
 </script>
 <style scoped>
