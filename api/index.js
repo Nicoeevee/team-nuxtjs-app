@@ -7,3 +7,10 @@ export function Test1(query) {
     params: query
   })
 }
+export const Test2= (data) => {
+  return request({
+    url: 'article/saveOrUpdate',
+    method: 'post',
+    data
+  })
+};
