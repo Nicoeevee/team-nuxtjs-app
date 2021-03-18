@@ -34,7 +34,7 @@
 
 <script>
 	export default{
-		layout:'home'
+		layout:'default'
 	}
 </script>
 
