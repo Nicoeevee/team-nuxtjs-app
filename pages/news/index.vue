@@ -89,6 +89,7 @@ export default {
   border-radius: 5px;
   box-sizing: border-box;
   padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 8px rgba(0, 0, 0, .09)
 }
 
 .center_right {
@@ -99,6 +100,7 @@ export default {
   border-radius: 5px;
   box-sizing: border-box;
   padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 8px rgba(0, 0, 0, .09)
 }
 
 .article {

@@ -25,7 +25,7 @@
       </div>
     </section>
     <div class="carousel">
-      <el-carousel :interval="5000" arrow="hover" height="560px" indicator-position="outside">
+      <el-carousel :interval="5000"  arrow="hover" height="560px" indicator-position="none">
         <el-carousel-item v-for="img in images" :key="img">
           <img :src="img" alt="轮播图">/>
         </el-carousel-item>
@@ -144,8 +144,10 @@ export default {
 
 .carousel {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0;
+  padding: 10px 5px;
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)*/
 }
 
 .carousel img {
