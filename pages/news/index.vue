@@ -1,39 +1,40 @@
 <template>
   <div class="content">
-      <div class="center">
-        <div class="center_left">
-          <div v-for="i in NewsData" :key="i" class="article" @click="$router.push({name: 'news_detail', params: {key: i}})">
-            <div class="article_title">
-              {{ i.title }}
-            </div>
-            <div class="article_content">
-              {{ i.content }}
-              <div class="article_footer">
-                <span><el-button icon="el-icon-search" circle></el-button></span>
-                <span>
-                <el-button type="warning" icon="el-icon-star-off" @click.stop="" circle></el-button>
+    <div class="center">
+      <div class="center_left">
+        <div v-for="i in NewsData" :key="i" class="article"
+             @click="$router.push({name: 'news_detail', params: {key: i}})">
+          <div class="article_title">
+            {{ i.title }}
+          </div>
+          <div class="article_content">
+            &emsp;&emsp;{{ i.content }}
+            <div class="article_footer">
+              <span><el-button icon="el-icon-search" round>查看</el-button></span>
+              <span>
+                <el-button icon="el-icon-star-off" round type="warning" @click.stop="">收藏</el-button>
                </span>
-                <span>
-                   <el-button type="info" icon="el-icon-message" @click.stop="" circle></el-button></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="center_right">
-          <div class="right_title">
-            推荐
-          </div>
-          <div v-for="o in NewsData" :key="o" class="right_item">
-            <div class="item_top">
-              <span> <i class="fa fa-calendar-times-o"></i> {{ formatDate(o.publishTime) }} </span>
-              <!--            <span><i class="fa fa-eye"></i> 20</span>-->
-            </div>
-            <div class="item_bootom">
-              {{ o.content.slice(0, 64) }}…
+              <span>
+                   <el-button circle icon="el-icon-message" type="info" @click.stop=""></el-button></span>
             </div>
           </div>
         </div>
       </div>
+      <div class="center_right">
+        <div class="right_title">
+          推荐
+        </div>
+        <div v-for="o in NewsData" :key="o" class="right_item">
+          <div class="item_top">
+            <span> <i class="fa fa-calendar-times-o"></i> {{ formatDate(o.publishTime) }} </span>
+            <!--            <span><i class="fa fa-eye"></i> 20</span>-->
+          </div>
+          <div class="item_bootom">
+            {{ o.content.slice(0, 64) }}…
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
