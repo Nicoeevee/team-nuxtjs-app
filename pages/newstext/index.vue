@@ -3,11 +3,11 @@
     <div class="center">
       <div class="center_left" >
        <div style="float: left">
-         <el-button type="info" @click="$router.push({name: 'news'})">返回</el-button></div>
+         <el-button type="primary" @click="$router.push({name: 'news'})"><i class="el-icon-back"></i></el-button></div>
         <h3 align="center"> {{ NewsData.title }}</h3>
           <span align="center" style="display: block">{{ formatDate(NewsData.publishTime) }} </span>
         <div class="inner" >
-          {{ NewsData.content }}
+          <p style="font-family: PingFang SC;line-height: 1.5">&emsp;&emsp;{{ NewsData.content }}</p>
         </div>
         <div class="inner_footer">
           <el-link type="primary">上一篇</el-link>
@@ -70,7 +70,7 @@
     margin-top: 10px;
     width: 760px;
     height: 500px;
-    background-color: #fffbf7;
+    background-color: #E0EEE0;
   }
   .inner_footer{
     margin-top: 15px;
