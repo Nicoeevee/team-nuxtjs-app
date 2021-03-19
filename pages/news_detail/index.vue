@@ -11,8 +11,8 @@
           <p style="font-family: PingFang SC;line-height: 1.5">&emsp;&emsp;{{ NewsData.content }}</p>
         </div>
         <div class="inner_footer">
-          <el-link type="primary">上一篇</el-link>
-          <el-link type="primary">下一篇</el-link>
+          <el-link type="primary" @click="qiehuan(-1)">上一篇</el-link>
+          <el-link type="primary" @click="qiehuan(0)">下一篇</el-link>
         </div>
       </div>
       <div class="center_right">
@@ -60,8 +60,29 @@ export default {
       var mon = date.getMonth() + 1;
       var day = date.getDate();
       return year + '/' + mon + '/' + day;
+    },
+    qiehuan(card){
+        for(let i=0;i<this.tuijian.length;i++){
+          if(card==-1){
+            if(this.tuijian[i].id==this.NewsData.id){
+                    if(i==0){
+                      this.$message('没有上一条新闻');
+                    }else{this.NewsData=this.tuijian[i-1];}}}
+                  else if(card==0){
+                 if(this.tuijian[i].id==this.NewsData.id){
+                      console.log(i);
+                      this.NewsData=this.tuijian[++i];
+                      if(i==this.tuijian.length){
+                        this.$message('没有下一条新闻');
+                        this.NewsData=this.tuijian[i-1];
+                        break;
+                      }
+            }
+                  }
+
+        }
+
     }
-    ,
   }
 };
 </script>
@@ -71,7 +92,8 @@ export default {
   margin-top: 10px;
   width: 760px;
   height: 500px;
-  background-color: #E0EEE0;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
 }
 
 .inner_footer {
