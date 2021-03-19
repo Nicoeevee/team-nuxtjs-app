@@ -5,23 +5,35 @@
         <div class="process-steps-container container-medium with-padding">
           <div class="process-step-container process-step-1">
             <div class="process-step-title-container">
-              <h1 class="process-step-title">着手开发。</h1>
-              <div class="process-step-title-overlay">着手开发。</div>
+              <h1 class="process-step-title">着手开发</h1>
+              <div class="process-step-title-overlay">着手开发</div>
             </div>
           </div>
           <div class="process-step-container process-step-2">
             <div class="process-step-title-container">
-              <h1 class="process-step-title">立即预览。</h1>
-              <div class="process-step-title-overlay">立即预览。</div>
+              <h1 class="process-step-title">立即预览</h1>
+              <div class="process-step-title-overlay">立即预览</div>
             </div>
           </div>
           <div class="process-step-container process-step-3">
             <div class="process-step-title-container">
-              <h1 class="process-step-title">轻松部署。</h1>
-              <div class="process-step-title-overlay">轻松部署。</div>
+              <h1 class="process-step-title">轻松部署</h1>
+              <div class="process-step-title-overlay">轻松部署</div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="hero_buttons">
+        <el-button class="buttons_black" type="primary" plain>Start Deploying</el-button>
+        <el-button class="buttons_gray" type="primary" plain>Get a Demo</el-button>
+      </div>
+      <h2 class="hero_description__3Ma5E">Vercel combines the best developer experience with an obsessive focus on end-user performance.
+        <br> Our platform enables frontend teams to do their best work.</h2>
+
+
+      <div class="tiny-heading_heading__eUMPB">
+        <small class="tiny-heading_heading_small" >Explore the Vercel way</small>
       </div>
     </section>
     <div class="carousel">
@@ -50,14 +62,60 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+.hero_buttons{
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0 80px 0;
+  .el-button{
+    width: 200px;
+    height: 50px;
+    font-weight:500;
+    font-size: 1rem;
+  }
+  .buttons_black {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+    &:hover{
+      color: #000;
+      background-color: #fff;
+      border-color: #000;
+    }
+  }
 
+  .buttons_gray {
+    color: #666 ;
+    background-color: #fff;
+    border-color: #999;
+    &:hover{
+      color: #000;
+      background-color: #fff;
+      border-color: #000;
+    }
+  }
+}
 
-.buttons {
-  margin-bottom: 64px;
+.hero_description__3Ma5E{
+  line-height: 35px!important;
+  color: #666;
+  font-weight: 400;
+  font-size: 1.25rem;
+  letter-spacing: -.02em;
+  text-align: center;
+  margin: 10px 0 54px;
+}
+
+.tiny-heading_heading_small{
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0;
+  padding-left: 0.2rem;
+  color: #000000;
 }
 
 .section-process {
+  text-align: center;
   margin-left: 128px;
   margin-bottom: 64px;
   margin-top: 64px;
@@ -86,7 +144,7 @@ export default {
 .section-process .process-steps-container .process-step-container .process-step-title-container .process-step-title-overlay {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 112px;
   width: auto;
   height: 100%;
   opacity: 1;
