@@ -7,12 +7,12 @@
       <!--        :src="logo"-->
       <!--        fit="fit">-->
       <!--      </el-image>-->
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1" @click="$router.push({name: 'index'})">首页</el-menu-item>
-        <el-menu-item index="2" @click="$router.push({name: 'news'})">新闻</el-menu-item>
-        <el-menu-item index="3" @click="$router.push({name: 'examples'})">案例</el-menu-item>
-        <el-menu-item index="4" @click="$router.push({name: 'solution'})">疫情防控</el-menu-item>
-        <el-menu-item index="5" @click="$router.push({name: 'playground'})">playground</el-menu-item>
+      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" >
+        <el-menu-item index="/" @click="$router.push({name: 'index'})">首页</el-menu-item>
+        <el-menu-item index="/news" @click="$router.push({name: 'news'})">新闻</el-menu-item>
+        <el-menu-item index="/examples" @click="$router.push({name: 'examples'})">案例</el-menu-item>
+        <el-menu-item index="/solution" @click="$router.push({name: 'solution'})">疫情防控</el-menu-item>
+        <el-menu-item index="/playground" @click="$router.push({name: 'playground'})">playground</el-menu-item>
       </el-menu>
       <div class="more">
         <el-link type="info"> 加入我们
@@ -37,8 +37,7 @@ export default {
   name: "the_nav",
   data() {
     return {
-      activeIndex: '1',
-      activeIndex2: '1',
+      activeIndex: this.$route.path ?? '/',
       logo:
         require("../assets/hhxy.jpg"),
       qrcode:
