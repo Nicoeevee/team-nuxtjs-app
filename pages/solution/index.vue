@@ -2,7 +2,7 @@
   <div class="container">
     <h1>疫情防控数据</h1>
     <el-table
-      :data="tableData"
+      :data="list"
       border
       style="width: 100%">
       <el-table-column
@@ -24,22 +24,32 @@
         label="感染人数">
       </el-table-column>
       <el-table-column
+        prop="suspected"
+        label="疑似人数">
+      </el-table-column>
+      <el-table-column
         prop="cure"
-        label="嫌疑人数">
+        label="治愈">
+      </el-table-column>
+      <el-table-column
+        prop="severe"
+        label="重症">
+      </el-table-column>
+      <el-table-column
+        prop="outside"
+        label="境外输入">
       </el-table-column>
     </el-table>
-
-      <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="page"
-        :page-sizes="[10, 20, 30, 50]"
-        :page-size="pageSize"
-        layout="total, sizes, prev, pager, next, jumper"
-        background
-        :total="total">
-      </el-pagination>
-
+    <el-pagination
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="page"
+      :page-sizes="[10, 20, 30, 50]"
+      :page-size="pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      background
+      :total="total">
+    </el-pagination>
   </div>
 </template>
 
@@ -49,10 +59,10 @@ export default {
   layout:'default',
   data() {
     return {
-      page: 1,
-      pageSize: 10,
-      total: 0,
-      tableData: [],
+        page: 1,
+        pageSize: 10,
+        total: 10,
+        list:  []
     }
   },
   created() {
@@ -62,8 +72,9 @@ export default {
     // 查询
     async findAll(page,pageSize){
       const data = await epidemic_pageQuery({page,pageSize})
-      this.tableData = data.data.list;
+      this.list = data.data.list;
       this.total = data.data.total
+
     },
     //分页查询
     handleSizeChange(val) {
@@ -75,16 +86,18 @@ export default {
       this.findAll(this.page,this.pageSize)
     },
 
-
   },
 }
 </script>
 
 <style scoped>
-.el-pagination{
-  float: right;
-  margin: 10px;
-
-
+.container {
+  padding-top: 8px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 </style>

@@ -6,26 +6,47 @@
 
     <div class="neirong">
         <div class="div1">
-
         </div>
       <div class="div2">
-
       </div>
       <div class="div3">
+    </div>
+    </div>
 
+    <div class="footer">
+        <h2>立即体验Vercel, 开启数字空间创新运营体验</h2>
+      <el-button  type="danger" @click="hrefVercel()"  round>立即体验</el-button>
     </div>
-    </div>
+
   </div>
 
 </template>
 
 <script>
 export default{
-  layout:'default'
+  layout:'default',
+  methods:{
+    hrefVercel(){
+      window.open('https://vercel.com')
+    }
+  }
 }
 </script>
 
 <style scoped>
+  .footer{
+    width: 100%;
+    height: 300px;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer>h2{
+    margin-bottom: 20px;
+  }
+
  .content{
    height: 100%;
    width: 100%;
@@ -39,7 +60,7 @@ export default{
  }
  .neirong>div
  {
-
+  margin-top: 20px;
   text-align: center;
    height: 300px;
    width: 500px;
