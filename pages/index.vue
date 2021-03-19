@@ -53,10 +53,12 @@ export default {
 <style scoped>
 .section-process {
   margin:72px;
-  --gradient-color-1: #ef008f;
-  --gradient-color-2: #6ec3f4;
-  --gradient-color-3: #7038ff;
-  --gradient-color-4: #c9c9c9;
+  --gradient-color-1: #007CF0;
+  --gradient-color-2: #00DFD8;
+  --gradient-color-3: #7928CA;
+  --gradient-color-4: #FF0080;
+  --gradient-color-5: #FF4D4D;
+  --gradient-color-6: #F9CB28;
 }
 
 .section-process .process-steps-container .process-step-container .process-step-title-container {
@@ -90,12 +92,12 @@ export default {
 }
 
 .section-process .process-steps-container .process-step-container.process-step-2 .process-step-title-overlay {
-  background-image: linear-gradient(90deg, var(--gradient-color-2), var(--gradient-color-3));
+  background-image: linear-gradient(90deg, var(--gradient-color-3), var(--gradient-color-4));
   animation: animated-gradient-title-2 8s infinite;
 }
 
 .section-process .process-steps-container .process-step-container.process-step-3 .process-step-title-overlay {
-  background-image: linear-gradient(90deg, var(--gradient-color-3), var(--gradient-color-1));
+  background-image: linear-gradient(90deg, var(--gradient-color-5), var(--gradient-color-6));
   animation: animated-gradient-title-3 8s infinite;
 }
 
