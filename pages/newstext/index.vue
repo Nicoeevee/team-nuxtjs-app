@@ -10,8 +10,8 @@
           {{ NewsData.content }}
         </div>
         <div class="inner_footer">
-          <a>上一篇</a>
-          <a>下一篇</a>
+          <el-link type="primary">上一篇</el-link>
+          <el-link type="primary">下一篇</el-link>
         </div>
       </div>
       <div class="center_right">
