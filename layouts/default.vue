@@ -9,20 +9,23 @@
   </div>
 </template>
 <style>
-.fadein {
+.fadein{
   animation: 1s appear;
   margin: 0;
 }
 
 .home_main {
-  min-height: 100vh;
-  position: relative;
+  /*position: relative;*/
+  /*z-index: 99;*/
+  display: flex;
+  flex-direction: column;
 }
 
 .footer_main {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  /*z-index: 1;*/
 }
 
 html {

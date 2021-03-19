@@ -42,7 +42,7 @@
     </el-table>
 
 
-    <div >
+    <div  class="pagination">
       <el-pagination
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
@@ -99,7 +99,13 @@ export default {
 <style scoped>
 .container {
   padding: 15px;
-
+  min-height: 87vh;
+}
+.pagination::before,
+.pagination::after{
+  content: '';
+  display: table;
+  clear: both;
 }
   .el-pagination{
     float: right;
