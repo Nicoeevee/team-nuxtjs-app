@@ -32,7 +32,7 @@
         <br> Our platform enables frontend teams to do their best work.</h2>
 
 
-      <div class="tiny-heading_heading__eUMPB">
+      <div class="tiny-heading_heading__eUMPB" style="text-align: center">
         <small class="tiny-heading_heading_small" >Explore the Vercel way</small>
       </div>
     </section>
@@ -64,8 +64,9 @@ export default {
 
 <style lang="less" scoped>
 .hero_buttons{
+  width: 600px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 40px 0 80px 0;
   .el-button{
     width: 200px;
@@ -115,7 +116,7 @@ export default {
 }
 
 .section-process {
-  text-align: center;
+  /*text-align: center;*/
   margin-left: 128px;
   margin-bottom: 64px;
   margin-top: 64px;
@@ -144,7 +145,7 @@ export default {
 .section-process .process-steps-container .process-step-container .process-step-title-container .process-step-title-overlay {
   position: absolute;
   top: 0;
-  left: 112px;
+  left: 0;
   width: auto;
   height: 100%;
   opacity: 1;
