@@ -35,7 +35,26 @@ export default {
 .index_slogan {
   font-size: 9rem;
 }
+.index_slogan > span{
+  color: #5BA6DF;
+  /*text-shadow: 1px 1px 10px #5BA6DF;*/
+  background-image: -webkit-linear-gradient(left, #c90f2d, #e62bad 25%, #7d2ac9 50%, #1623e6 75%, #2EC7C9 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s infinite linear;
+  font-family:Chaparral Pro Light;
+  letter-spacing:2px;
+}
 
+@keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
 .index_slogan > span {
   word-break: normal;
   width: auto;
