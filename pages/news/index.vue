@@ -9,13 +9,13 @@
             <div class="article_content">
               {{ i.content }}
               <div class="article_footer">
-                <span>200 浏览</span>
+                <span><el-button icon="el-icon-search" circle></el-button></span>
                 <span>
-                <i aria-hidden="true" class="fa fa-comment"></i>评论
+                <el-button type="warning" icon="el-icon-star-off" circle></el-button>
               </span>
                 <span
-                ><i aria-hidden="true" class="fa fa-thumbs-o-up"></i>点赞</span
                 >
+                   <el-button type="info" icon="el-icon-message" circle></el-button></span>
               </div>
             </div>
           </div>
