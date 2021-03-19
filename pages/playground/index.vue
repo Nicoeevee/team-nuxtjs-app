@@ -29,7 +29,7 @@
   <!--    </el-container>-->
   <!--  </el-container>-->
 </template>
-<style>
+<style scoped>
 .container {
   padding-top: 8px;
   margin: auto;

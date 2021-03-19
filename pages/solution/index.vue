@@ -33,7 +33,6 @@
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
         :current-page="page"
-        :page-sizes="[10, 20, 30, 50]"
         :page-size="pageSize"
         layout="total, sizes, prev, pager, next, jumper"
         background
@@ -84,7 +83,5 @@ export default {
 .el-pagination{
   float: right;
   margin: 10px;
-
-
 }
 </style>

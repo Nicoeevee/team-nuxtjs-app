@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .index_slogan {
   font-size: 9rem;
 }
