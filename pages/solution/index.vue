@@ -40,9 +40,6 @@
         :total="total">
       </el-pagination>
 
-
-
-
   </div>
 </template>
 
@@ -87,5 +84,7 @@ export default {
 .el-pagination{
   float: right;
   margin: 10px;
+
+
 }
 </style>
