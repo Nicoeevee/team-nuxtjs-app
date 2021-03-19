@@ -2,8 +2,8 @@
   <div class="content">
       <div class="center">
         <div class="center_left">
-          <div v-for="i in NewsData" :key="i" class="article">
-            <div class="article_title" @click="$router.push({name: 'newstext', params: {key: i}})">
+          <div v-for="i in NewsData" :key="i" class="article" @click="$router.push({name: 'newstext', params: {key: i}})">
+            <div class="article_title">
               {{ i.title }}
             </div>
             <div class="article_content">
@@ -11,11 +11,10 @@
               <div class="article_footer">
                 <span><el-button icon="el-icon-search" circle></el-button></span>
                 <span>
-                <el-button type="warning" icon="el-icon-star-off" circle></el-button>
-              </span>
-                <span
-                >
-                   <el-button type="info" icon="el-icon-message" circle></el-button></span>
+                <el-button type="warning" icon="el-icon-star-off" @click.stop="" circle></el-button>
+               </span>
+                <span>
+                   <el-button type="info" icon="el-icon-message" @click.stop="" circle></el-button></span>
               </div>
             </div>
           </div>
