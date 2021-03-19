@@ -1,10 +1,12 @@
 <template>
   <div class="container">
-    <h1 class="index_slogan"><span>
-      着手开发。
-      立即预览。
-      轻松部署。
-    </span></h1>
+    <h1 class="index_slogan">
+      <span class="span1">
+    <span> 着手开发。</span><br/>
+    <span>立即预览。</span><br/>
+    <span>轻松部署。</span><br/>
+    </span>
+    </h1>
     <div class="carousel">
       <el-carousel :interval="5000" indicator-position="outside" arrow="hover" height="560px">
         <el-carousel-item v-for="img in images" :key="img">
@@ -36,9 +38,9 @@ export default {
   font-size: 9rem;
 }
 .index_slogan > span{
-  color: #5BA6DF;
+  color:  #000000;
   /*text-shadow: 1px 1px 10px #5BA6DF;*/
-  background-image: -webkit-linear-gradient(left, #c90f2d, #e62bad 25%, #7d2ac9 50%, #1623e6 75%, #2EC7C9 100%);
+  background-image: -webkit-linear-gradient(left, #c90f2d, #e62bad 25%, #7d2ac9 50%, #000000 75%,  #000000 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-background-size: 200% 100%;
@@ -55,7 +57,7 @@ export default {
     background-position: -100% 0;
   }
 }
-.index_slogan > span {
+.index_slogan > span1 {
   word-break: normal;
   width: auto;
   display: block;
