@@ -4,9 +4,7 @@
       <div class="center_left">
         <div v-for="i in NewsData" :key="i" class="article"
              @click="$router.push({name: 'news_detail', params: {key: i}})">
-          <div class="article_title">
-            {{ i.title }}
-          </div>
+          <h2>{{ i.title }}</h2>
           <div class="article_content">
             &emsp;&emsp;{{ i.content }}
             <div class="article_footer">
