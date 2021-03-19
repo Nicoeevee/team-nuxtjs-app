@@ -1,41 +1,40 @@
 <template>
   <div class="content">
-    <div class="center">
-      <div class="center_left">
-        <div v-for="i in NewsData" :key="i" class="article">
-          <div class="article_title">
-            {{ i.title }}
-          </div>
-          <div class="article_content">
-            {{ i.content }}
-            <div class="article_footer">
-              <span>200 浏览</span>
-              <span>
+      <div class="center">
+        <div class="center_left">
+          <div v-for="i in NewsData" :key="i" class="article">
+            <div class="article_title">
+              {{ i.title }}
+            </div>
+            <div class="article_content">
+              {{ i.content }}
+              <div class="article_footer">
+                <span>200 浏览</span>
+                <span>
                 <i aria-hidden="true" class="fa fa-comment"></i>评论
               </span>
-              <span
-              ><i aria-hidden="true" class="fa fa-thumbs-o-up"></i>点赞</span
-              >
+                <span
+                ><i aria-hidden="true" class="fa fa-thumbs-o-up"></i>点赞</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="center_right">
+          <div class="right_title">
+            推荐
+          </div>
+          <div v-for="o in NewsData" :key="o" class="right_item">
+            <div class="item_top">
+              <span> <i class="fa fa-calendar-times-o"></i> {{ formatDate(o.publishTime) }} </span>
+              <!--            <span><i class="fa fa-eye"></i> 20</span>-->
+            </div>
+            <div class="item_bootom">
+              {{ o.content.slice(0, 64) }}…
             </div>
           </div>
         </div>
       </div>
-
-      <div class="center_right">
-        <div class="right_title">
-          推荐
-        </div>
-        <div v-for="o in NewsData" :key="o" class="right_item">
-          <div class="item_top">
-            <span> <i class="fa fa-calendar-times-o"></i> {{ formatDate(o.publishTime) }} </span>
-            <!--            <span><i class="fa fa-eye"></i> 20</span>-->
-          </div>
-          <div class="item_bootom">
-            {{ o.content.slice(0, 10) }}..........
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 <script>
