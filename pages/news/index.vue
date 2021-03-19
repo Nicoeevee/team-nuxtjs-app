@@ -69,21 +69,19 @@ export default {
 </script>
 <style scoped>
 .content {
+  padding-top: 16px;
   width: 100%;
   background-color: #f9f9f9;
 }
 
 .center {
-  margin: 4px auto auto auto;
-  padding-top: 8px;
+  margin: auto;
   width: 1100px;
-  overflow: hidden;
 }
 
 .center_left {
-  width: 780px;
-  margin-right: 20px;
-  min-height: 500px;
+  width: 640px;
+  margin-right: 16px;
   background-color: #fff;
   float: left;
   border-radius: 5px;
@@ -94,7 +92,6 @@ export default {
 
 .center_right {
   width: 300px;
-  min-height: 500px;
   background-color: #fff;
   float: left;
   border-radius: 5px;
@@ -105,14 +102,11 @@ export default {
 
 .article {
   width: 100%;
-  /* height: 300px; */
-  /* background-color: red; */
   border-bottom: 1px solid #ddd;
   margin-bottom: 15px;
 }
 
 .article_title {
-  /* font-size: 20px; */
   font-weight: bold;
   margin-bottom: 10px;
 }
@@ -130,7 +124,6 @@ export default {
 .right_title {
   padding-bottom: 10px;
   box-sizing: border-box;
-  /* background-color: red; */
   border-bottom: 1px solid #ddd;
 }
 
@@ -145,7 +138,7 @@ export default {
   margin-right: 11px;
 }
 
-.item_bootom {
+.item_bottom {
   margin-top: 11px;
   margin-bottom: 11px;
 }

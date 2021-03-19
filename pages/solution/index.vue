@@ -6,52 +6,50 @@
       border
       style="width: 100%">
       <el-table-column
-        prop="country"
         label="国家"
+        prop="country"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="province"
         label="行政省"
+        prop="province"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="dead"
-        label="死亡人数">
+        label="死亡人数"
+        prop="dead">
       </el-table-column>
       <el-table-column
-        prop="confirmed"
-        label="感染人数">
+        label="感染人数"
+        prop="confirmed">
       </el-table-column>
       <el-table-column
-        prop="suspected"
-        label="疑似人数">
+        label="疑似人数"
+        prop="suspected">
       </el-table-column>
       <el-table-column
-        prop="cure"
-        label="治愈">
+        label="治愈"
+        prop="cure">
       </el-table-column>
       <el-table-column
-        prop="severe"
-        label="重症">
+        label="重症"
+        prop="severe">
       </el-table-column>
       <el-table-column
-        prop="outside"
-        label="境外输入">
+        label="境外输入"
+        prop="outside">
       </el-table-column>
     </el-table>
-
-
-    <div  class="pagination">
+    <div class="pagination">
       <el-pagination
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
         :current-page="page"
-        :page-sizes="[10, 20, 30, 50]"
         :page-size="pageSize"
-        layout="total, sizes, prev, pager, next, jumper"
+        :page-sizes="[10, 20, 30, 50]"
+        :total="total"
         background
-        :total="total">
+        layout="total, sizes, prev, pager, next, jumper"
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange">
       </el-pagination>
     </div>
 
@@ -59,24 +57,25 @@
 </template>
 
 <script>
-  import {epidemic_pageQuery} from '@/api'
+import {epidemic_pageQuery} from '@/api'
+
 export default {
-  layout:'default',
+  layout: 'default',
   data() {
     return {
-        page: 1,
-        pageSize: 10,
-        total: 10,
-        list:  []
+      page: 1,
+      pageSize: 10,
+      total: 10,
+      list: []
     }
   },
   created() {
-      this.findAll(this.page,this.pageSize);
+    this.findAll(this.page, this.pageSize);
   },
-  methods:{
+  methods: {
     // 查询
-    async findAll(page,pageSize){
-      const data = await epidemic_pageQuery({page,pageSize})
+    async findAll(page, pageSize) {
+      const data = await epidemic_pageQuery({page, pageSize})
       this.list = data.data.list;
       this.total = data.data.total
 
@@ -84,11 +83,11 @@ export default {
     //分页查询
     handleSizeChange(val) {
       this.pageSize = val
-      this.findAll(this.page,this.pageSize)
+      this.findAll(this.page, this.pageSize)
     },
     handleCurrentChange(val) {
       this.page = val
-      this.findAll(this.page,this.pageSize)
+      this.findAll(this.page, this.pageSize)
     },
 
 
@@ -98,17 +97,25 @@ export default {
 
 <style scoped>
 .container {
-  padding: 15px;
-  min-height: 87vh;
+  margin: auto;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
+
 .pagination::before,
-.pagination::after{
+.pagination::after {
   content: '';
   display: table;
   clear: both;
 }
-  .el-pagination{
-    float: right;
-    margin: 10px;
-  }
+
+.el-pagination {
+  float: right;
+  margin: 8px;
+}
 </style>
