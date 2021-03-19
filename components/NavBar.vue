@@ -2,17 +2,12 @@
   <div id="nav-wrapper">
     <div class="nav_container">
       <Logo></Logo>
-      <!--      <el-image-->
-      <!--        style="width: 50px; height: 50px"-->
-      <!--        :src="logo"-->
-      <!--        fit="fit">-->
-      <!--      </el-image>-->
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect" >
+      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"  active-text-color="black" >
         <el-menu-item index="/" @click="$router.push({name: 'index'})">首页</el-menu-item>
         <el-menu-item index="/news" @click="$router.push({name: 'news'})">新闻</el-menu-item>
         <el-menu-item index="/examples" @click="$router.push({name: 'examples'})">案例</el-menu-item>
         <el-menu-item index="/solution" @click="$router.push({name: 'solution'})">疫情防控</el-menu-item>
-        <el-menu-item index="/playground" @click="$router.push({name: 'playground'})">playground</el-menu-item>
+<!--        <el-menu-item index="/playground" @click="$router.push({name: 'playground'})">playground</el-menu-item>-->
       </el-menu>
       <div class="more">
         <el-link type="info"> 加入我们
@@ -54,7 +49,7 @@ export default {
 
 <style scoped>
 .nav_container {
-  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 10px -10px rgba(0,0,0,0.12);
   display: flex;
   justify-content: space-around;
   align-items: center;

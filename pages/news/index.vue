@@ -2,19 +2,19 @@
   <div class="content">
     <div class="center">
       <div class="center_left">
-        <div class="article" v-for="i in NewsData" :key="i">
+        <div v-for="i in NewsData" :key="i" class="article">
           <div class="article_title">
-            {{i.title}}
+            {{ i.title }}
           </div>
           <div class="article_content">
-            {{i.content}}
+            {{ i.content }}
             <div class="article_footer">
               <span>200 浏览</span>
               <span>
-                <i class="fa fa-comment" aria-hidden="true"></i>评论
+                <i aria-hidden="true" class="fa fa-comment"></i>评论
               </span>
               <span
-              ><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>点赞</span
+              ><i aria-hidden="true" class="fa fa-thumbs-o-up"></i>点赞</span
               >
             </div>
           </div>
@@ -25,13 +25,13 @@
         <div class="right_title">
           推荐
         </div>
-        <div class="right_item" v-for="o in NewsData" :key="o">
+        <div v-for="o in NewsData" :key="o" class="right_item">
           <div class="item_top">
-            <span> <i class="fa fa-calendar-times-o"></i> {{formatDate(o.publishTime)}} </span>
-<!--            <span><i class="fa fa-eye"></i> 20</span>-->
+            <span> <i class="fa fa-calendar-times-o"></i> {{ formatDate(o.publishTime) }} </span>
+            <!--            <span><i class="fa fa-eye"></i> 20</span>-->
           </div>
           <div class="item_bootom">
-            {{o.content.slice(0,10)}}..........
+            {{ o.content.slice(0, 10) }}..........
           </div>
         </div>
       </div>
@@ -39,33 +39,34 @@
   </div>
 </template>
 <script>
-  import {article_findAll} from '@/api'
-  export default {
-    layout: "default",
-    data() {
-      return {
-        NewsData: [],
-      };
+import {article_findAll} from '@/api'
+
+export default {
+  layout: "default",
+  data() {
+    return {
+      NewsData: [],
+    };
+  },
+  created() {
+    this.findAll()
+  },
+  methods: {
+    async findAll() {
+      const data = await article_findAll();
+      this.NewsData = data.data;
     },
-    created() {
-      this.findAll()
-    },
-    methods:{
-      async findAll(){
-        const data = await article_findAll();
-        this.NewsData=data.data;
-      },
-      //时间戳转换方法    time:需要被转换的时间戳数字
-      formatDate(time) {
-        var date=new Date(parseInt(time));
-        var year=date.getFullYear();
-        var mon = date.getMonth()+1;
-        var day = date.getDate();
-        return year+'/'+mon+'/'+day;
-      }
-      ,
+    //时间戳转换方法    time:需要被转换的时间戳数字
+    formatDate(time) {
+      var date = new Date(parseInt(time));
+      var year = date.getFullYear();
+      var mon = date.getMonth() + 1;
+      var day = date.getDate();
+      return year + '/' + mon + '/' + day;
     }
-  };
+    ,
+  }
+};
 </script>
 <style scoped>
 .content {

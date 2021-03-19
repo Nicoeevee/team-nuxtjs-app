@@ -51,8 +51,16 @@ export default {
 </script>
 
 <style scoped>
+
+
+.buttons {
+  margin-bottom: 64px;
+}
+
 .section-process {
-  margin:72px;
+  margin-left: 128px;
+  margin-bottom: 64px;
+  margin-top: 64px;
   --gradient-color-1: #007CF0;
   --gradient-color-2: #00DFD8;
   --gradient-color-3: #7928CA;

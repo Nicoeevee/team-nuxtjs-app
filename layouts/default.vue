@@ -1,15 +1,19 @@
 <template>
   <div class="home_main">
-
-
     <NavBar/>
-    <Nuxt/>
+    <Nuxt class="fadein"/>
     <div class="footer_main">
       <Footer></Footer>
     </div>
+
   </div>
 </template>
 <style>
+.fadein {
+  animation: 1s appear;
+  margin: 0;
+}
+
 .home_main {
   min-height: 100vh;
   position: relative;
