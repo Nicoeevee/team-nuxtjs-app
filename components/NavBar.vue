@@ -1,7 +1,10 @@
 <template>
   <div id="nav-wrapper">
     <div class="nav_container">
-      <Logo></Logo>
+      <a @click="hrefVercel()">
+        <Logo></Logo>
+      </a>
+
       <el-menu :default-active="activeIndex" active-text-color="black" class="el-menu-demo" mode="horizontal"
                @select="handleSelect">
         <el-menu-item index="/" @click="$router.push({name: 'index'})">首页</el-menu-item>
@@ -43,6 +46,9 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+    },
+    hrefVercel() {
+      window.open('https://vercel.com/design')
     }
   }
 }

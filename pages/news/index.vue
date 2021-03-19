@@ -2,7 +2,7 @@
   <div class="content">
       <div class="center">
         <div class="center_left">
-          <div v-for="i in NewsData" :key="i" class="article" @click="$router.push({name: 'newstext', params: {key: i}})">
+          <div v-for="i in NewsData" :key="i" class="article" @click="$router.push({name: 'news_detail', params: {key: i}})">
             <div class="article_title">
               {{ i.title }}
             </div>
