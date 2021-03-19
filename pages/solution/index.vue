@@ -40,16 +40,21 @@
         label="境外输入">
       </el-table-column>
     </el-table>
-    <el-pagination
-      @size-change="handleSizeChange"
-      @current-change="handleCurrentChange"
-      :current-page="page"
-      :page-sizes="[10, 20, 30, 50]"
-      :page-size="pageSize"
-      layout="total, sizes, prev, pager, next, jumper"
-      background
-      :total="total">
-    </el-pagination>
+
+
+    <div >
+      <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="page"
+        :page-sizes="[10, 20, 30, 50]"
+        :page-size="pageSize"
+        layout="total, sizes, prev, pager, next, jumper"
+        background
+        :total="total">
+      </el-pagination>
+    </div>
+
   </div>
 </template>
 
@@ -93,12 +98,11 @@ export default {
 
 <style scoped>
 .container {
-  padding-top: 8px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+  padding: 15px;
+
 }
+  .el-pagination{
+    float: right;
+    margin: 10px;
+  }
 </style>
