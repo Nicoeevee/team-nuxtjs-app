@@ -25,14 +25,14 @@
       </div>
 
       <div class="hero_buttons">
-        <el-button class="buttons_black" type="primary" plain>Start Deploying</el-button>
-        <el-button class="buttons_gray" type="primary" plain>Get a Demo</el-button>
+        <el-button class="buttons_black" type="primary" plain>开始 部署</el-button>
+        <el-button class="buttons_gray" type="primary" plain>获取 演示</el-button>
       </div>
-      <h2 class="hero_description__3Ma5E">Vercel combines the best developer experience with an obsessive focus on end-user performance.
-        <br> Our platform enables frontend teams to do their best work.</h2>
+      <h2 class="hero_description__3Ma5E">Vercel将最佳开发人员体验与对最终用户性能的执着关注结合起来。
+        <br>我们的平台的前端团队能够做到最好.</h2>
 
 
-      <div class="tiny-heading_heading__eUMPB" style="text-align: center">
+      <div class="tiny-heading_heading__eUMPB" style="text-align: center;width: 630px">
         <small class="tiny-heading_heading_small" >Explore the Vercel way</small>
       </div>
     </section>
@@ -105,6 +105,7 @@ export default {
   letter-spacing: -.02em;
   text-align: center;
   margin: 10px 0 54px;
+  width: 630px;
 }
 
 .tiny-heading_heading_small{
